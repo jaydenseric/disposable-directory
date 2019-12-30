@@ -1,0 +1,52 @@
+{
+  "name": "disposable-directory",
+  "version": "1.0.0",
+  "description": "Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.",
+  "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": "github:jaydenseric/disposable-directory",
+  "homepage": "https://github.com/jaydenseric/disposable-directory#readme",
+  "bugs": "https://github.com/jaydenseric/disposable-directory/issues",
+  "funding": "https://github.com/sponsors/jaydenseric",
+  "keywords": [
+    "disposable",
+    "temporary",
+    "directory",
+    "tmp",
+    "dir"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib",
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "coverage-node": "^2.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-env": "^12.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsdoc": "^18.4.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jsdoc-md": "^4.0.1",
+    "prettier": "^1.19.1",
+    "test-director": "^2.0.0"
+  },
+  "scripts": {
+    "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
+    "prepare:jsdoc": "jsdoc-md",
+    "prepare:prettier": "prettier readme.md --write",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:api": "coverage-node test",
+    "prepublishOnly": "npm test"
+  }
+}
