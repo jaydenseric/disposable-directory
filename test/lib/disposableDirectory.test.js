@@ -1,9 +1,9 @@
 'use strict'
 
 const assert = require('assert')
-const disposableDirectory = require('../lib/disposableDirectory')
-const fsPathExists = require('./fsPathExists')
-const sleep = require('./sleep')
+const disposableDirectory = require('../../lib/disposableDirectory')
+const fsPathExists = require('../fsPathExists')
+const sleep = require('../sleep')
 
 module.exports = tests => {
   tests.add('`disposableDirectory` with a sync callback.', async () => {

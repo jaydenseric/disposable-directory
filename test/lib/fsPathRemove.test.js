@@ -1,9 +1,9 @@
 'use strict'
 
 const assert = require('assert')
-const createTempDir = require('../lib/createTempDir')
-const fsPathRemove = require('../lib/fsPathRemove')
-const fsPathExists = require('./fsPathExists')
+const createTempDir = require('../../lib/createTempDir')
+const fsPathRemove = require('../../lib/fsPathRemove')
+const fsPathExists = require('../fsPathExists')
 
 module.exports = tests => {
   tests.add('`fsPathRemove` with a directory that exists.', async () => {
