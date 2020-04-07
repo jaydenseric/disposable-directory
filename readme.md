@@ -38,9 +38,9 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 _How to use a disposable directory._
 
 > ```js
-> const { disposableDirectory } = require('disposable-directory')
+> const { disposableDirectory } = require('disposable-directory');
 >
-> disposableDirectory(async directoryPath => {
+> disposableDirectory(async (directoryPath) => {
 >   // Use the directory here.
 > })
 >   .then(() => {
@@ -48,5 +48,5 @@ _How to use a disposable directory._
 >   })
 >   .catch(() => {
 >     // The directory is gone.
->   })
+>   });
 > ```

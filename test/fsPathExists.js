@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const fs = require('fs')
+const fs = require('fs');
 
 /**
  * Determines if a file or directory path exists.
@@ -12,10 +12,10 @@ const fs = require('fs')
  */
 module.exports = async function fsPathExists(path) {
   try {
-    await fs.promises.access(path)
-    return true
+    await fs.promises.access(path);
+    return true;
   } catch (error) {
-    if (error.code === 'ENOENT') return false
-    throw error
+    if (error.code === 'ENOENT') return false;
+    throw error;
   }
-}
+};
