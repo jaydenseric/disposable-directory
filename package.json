@@ -27,18 +27,18 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "coverage-node": "^2.0.2",
+    "coverage-node": "^2.0.3",
     "eslint": "^6.7.2",
-    "eslint-config-env": "^13.0.1",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jsdoc": "^19.0.0",
-    "eslint-plugin-node": "^11.0.0",
+    "eslint-config-env": "^13.0.4",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsdoc": "^22.1.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.2",
     "hard-rejection": "^2.1.0",
-    "jsdoc-md": "^4.0.1",
+    "jsdoc-md": "^5.0.1",
     "prettier": "^1.19.1",
-    "test-director": "^3.0.0"
+    "test-director": "^4.0.0"
   },
   "scripts": {
     "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
