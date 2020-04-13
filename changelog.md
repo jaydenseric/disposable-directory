@@ -17,6 +17,7 @@
 - Configured Prettier option `semi` to the default, `true`.
 - Reorganized the test files.
 - Simplified `test/index.js`.
+- Ensure GitHub Actions run on pull request.
 
 ## 1.0.0
 
