@@ -1,6 +1,6 @@
 # disposable-directory changelog
 
-## Next
+## 2.0.0
 
 ### Major
 
