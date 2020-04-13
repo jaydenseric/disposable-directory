@@ -1,8 +1,8 @@
 'use strict';
 
 const assert = require('assert');
-const createTempDir = require('../../lib/createTempDir');
-const fsPathRemove = require('../../lib/fsPathRemove');
+const createTempDir = require('../../helpers/createTempDir');
+const fsPathRemove = require('../../helpers/fsPathRemove');
 const fsPathExists = require('../fsPathExists');
 
 module.exports = (tests) => {

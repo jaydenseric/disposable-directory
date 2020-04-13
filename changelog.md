@@ -2,6 +2,13 @@
 
 ## Next
 
+### Major
+
+- Added a [package `exports` field](https://nodejs.org/api/esm.html#esm_package_exports) and a `lib/index.mjs` file to support native ESM in Node.js.
+- Added package `sideEffects` and `module` fields for bundlers such as Webpack.
+- Undocumented internal helpers are now private, and can no longer be imported from packages outside this package.
+- Updated the package `engines.node` field to `10 - 12 || >= 13.7` to reflect the package `exports` related breaking changes.
+
 ### Patch
 
 - Updated dev dependencies.
