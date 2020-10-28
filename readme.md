@@ -35,6 +35,26 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 
 #### Examples
 
+_Ways to `import`._
+
+> ```js
+> import { disposableDirectory } from 'disposable-directory';
+> ```
+>
+> ```js
+> import disposableDirectory from 'disposable-directory/public/disposableDirectory.js';
+> ```
+
+_Ways to `require`._
+
+> ```js
+> const { disposableDirectory } = require('disposable-directory');
+> ```
+>
+> ```js
+> const disposableDirectory = require('disposable-directory/public/disposableDirectory');
+> ```
+
 _How to use a disposable directory._
 
 > ```js

@@ -10,6 +10,22 @@ const fsPathRemove = require('../private/fsPathRemove');
  * @name disposableDirectory
  * @param {Function} callback A sync or async callback that receives the temporary directory path.
  * @returns {Promise<void>} Resolves once the callback is done and the disposable directory is deleted.
+ * @example <caption>Ways to `import`.</caption>
+ * ```js
+ * import { disposableDirectory } from 'disposable-directory';
+ * ```
+ *
+ * ```js
+ * import disposableDirectory from 'disposable-directory/public/disposableDirectory.js';
+ * ```
+ * @example <caption>Ways to `require`.</caption>
+ * ```js
+ * const { disposableDirectory } = require('disposable-directory');
+ * ```
+ *
+ * ```js
+ * const disposableDirectory = require('disposable-directory/public/disposableDirectory');
+ * ```
  * @example <caption>How to use a disposable directory.</caption>
  * ```js
  * const { disposableDirectory } = require('disposable-directory');

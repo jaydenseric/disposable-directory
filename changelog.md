@@ -16,6 +16,7 @@
 - Updated EditorConfig.
 - Correct the supported Node.js versions documented in the readme.
 - Prettier JSDoc example code.
+- Documented how to `import` or `require` the `disposableDirectory` function.
 
 ## 2.0.0
 
