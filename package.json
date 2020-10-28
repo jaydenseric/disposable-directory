@@ -23,8 +23,6 @@
     "helpers",
     "lib"
   ],
-  "sideEffects": false,
-  "module": "lib/index.mjs",
   "main": "lib",
   "exports": {
     ".": {
