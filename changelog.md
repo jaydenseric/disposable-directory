@@ -10,6 +10,7 @@
 ### Patch
 
 - Also run GitHub Actions with Node.js v15, and not v13.
+- Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/install-test.html) command.
 
 ## 2.0.0
 
