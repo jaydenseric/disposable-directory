@@ -7,6 +7,10 @@
 - Updated the package `engines.node` field to `^10.17.0 || ^12.0.0 || >= 13.7.0`.
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 
+### Patch
+
+- Also run GitHub Actions with Node.js v15, and not v13.
+
 ## 2.0.0
 
 ### Major
