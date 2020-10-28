@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const disposableDirectory = require('../../lib/disposableDirectory');
+const disposableDirectory = require('../../public/disposableDirectory');
 const fsPathExists = require('../fsPathExists');
 const sleep = require('../sleep');
 

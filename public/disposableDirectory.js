@@ -1,7 +1,7 @@
 'use strict';
 
-const createTempDir = require('../helpers/createTempDir');
-const fsPathRemove = require('../helpers/fsPathRemove');
+const createTempDir = require('../private/createTempDir');
+const fsPathRemove = require('../private/fsPathRemove');
 
 /**
  * Asynchronously creates a disposable directory in the OS temporary directory

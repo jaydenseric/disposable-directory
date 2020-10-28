@@ -20,16 +20,16 @@
     "dir"
   ],
   "files": [
-    "helpers",
-    "lib"
+    "private",
+    "public"
   ],
-  "main": "lib",
+  "main": "public",
   "exports": {
     ".": {
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.js"
+      "import": "./public/index.mjs",
+      "require": "./public/index.js"
     },
-    "./lib/": "./lib/",
+    "./public/": "./public/",
     "./package": "./package.json",
     "./package.json": "./package.json"
   },
