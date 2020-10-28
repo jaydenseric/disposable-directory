@@ -17,7 +17,9 @@
     "temporary",
     "directory",
     "tmp",
-    "dir"
+    "dir",
+    "esm",
+    "mjs"
   ],
   "files": [
     "private",
