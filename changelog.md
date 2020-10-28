@@ -15,6 +15,7 @@
 - Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/install-test.html) command.
 - Updated EditorConfig.
 - Correct the supported Node.js versions documented in the readme.
+- Prettier JSDoc example code.
 
 ## 2.0.0
 

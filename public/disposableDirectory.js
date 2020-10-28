@@ -12,16 +12,17 @@ const fsPathRemove = require('../private/fsPathRemove');
  * @returns {Promise<void>} Resolves once the callback is done and the disposable directory is deleted.
  * @example <caption>How to use a disposable directory.</caption>
  * ```js
- * const { disposableDirectory } = require('disposable-directory')
+ * const { disposableDirectory } = require('disposable-directory');
  *
- * disposableDirectory(async directoryPath => {
+ * disposableDirectory(async (directoryPath) => {
  *   // Use the directory here.
  * })
  *   .then(() => {
  *     // The directory is gone.
- *   }).catch(() => {
- *     // The directory is gone.
  *   })
+ *   .catch(() => {
+ *     // The directory is gone.
+ *   });
  * ```
  */
 module.exports = async function disposableDirectory(callback) {
