@@ -1,7 +1,6 @@
 import { strictEqual } from 'assert';
 import disposableDirectory from '../index.mjs';
 import fsPathExists from './fsPathExists.mjs';
-import sleep from './sleep.mjs';
 
 export default (tests) => {
   tests.add('`disposableDirectory` with a sync callback.', async () => {
@@ -21,7 +20,10 @@ export default (tests) => {
 
     await disposableDirectory(async (tempDirPath) => {
       createdTempDirPath = tempDirPath;
-      await sleep(50);
+
+      // Wait for 50 milliseconds.
+      await new Promise((resolve) => setTimeout(resolve, 50));
+
       callbackAwaited = true;
     });
 
