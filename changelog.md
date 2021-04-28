@@ -7,6 +7,7 @@
 - Updated Node.js support to `^12.20 || >= 14.13`.
 - Updated dev dependencies, some of which require newer Node.js versions than were previously supported.
 - The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#esm_require).
+- The function `disposableDirectory` is now only accessible via a default `import` from the main index.
 
 ### Patch
 

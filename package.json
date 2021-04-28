@@ -23,12 +23,11 @@
   ],
   "files": [
     "private",
-    "public"
+    "index.mjs"
   ],
-  "main": "./public/index.mjs",
+  "main": "./index.mjs",
   "exports": {
-    ".": "./public/index.mjs",
-    "./public/": "./public/",
+    ".": "./index.mjs",
     "./package": "./package.json",
     "./package.json": "./package.json"
   },

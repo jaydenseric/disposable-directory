@@ -1,7 +1,7 @@
 import { strictEqual } from 'assert';
-import disposableDirectory from '../../public/disposableDirectory.mjs';
-import fsPathExists from '../fsPathExists.mjs';
-import sleep from '../sleep.mjs';
+import disposableDirectory from '../index.mjs';
+import fsPathExists from './fsPathExists.mjs';
+import sleep from './sleep.mjs';
 
 export default (tests) => {
   tests.add('`disposableDirectory` with a sync callback.', async () => {
