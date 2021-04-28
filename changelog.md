@@ -1,5 +1,11 @@
 # disposable-directory changelog
 
+## Next
+
+### Patch
+
+- Stop using [`hard-rejection`](https://npm.im/hard-rejection) to detect unhandled `Promise` rejections in tests, as Node.js v15+ does this natively.
+
 ## 3.0.0
 
 ### Major
