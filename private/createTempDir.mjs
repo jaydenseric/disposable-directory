@@ -1,8 +1,6 @@
-'use strict';
-
-const fs = require('fs');
-const { tmpdir } = require('os');
-const { sep } = require('path');
+import fs from 'fs';
+import { tmpdir } from 'os';
+import { sep } from 'path';
 
 /**
  * Creates a directory in the OS temporary directory.
@@ -11,9 +9,9 @@ const { sep } = require('path');
  * @returns {Promise<string>} Resolves the created directory path.
  * @ignore
  */
-module.exports = async function createTempDir() {
+export default async function createTempDir() {
   // On macOS `os.tmpdir()` returns the path to a symlink, see:
   // https://github.com/nodejs/node/issues/11422
   const osTempDirPath = await fs.promises.realpath(tmpdir());
   return fs.promises.mkdtemp(`${osTempDirPath}${sep}`);
-};
+}

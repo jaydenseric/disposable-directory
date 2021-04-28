@@ -1,11 +1,9 @@
-'use strict';
+import { strictEqual } from 'assert';
+import disposableDirectory from '../../public/disposableDirectory.mjs';
+import fsPathExists from '../fsPathExists.mjs';
+import sleep from '../sleep.mjs';
 
-const assert = require('assert');
-const disposableDirectory = require('../../public/disposableDirectory');
-const fsPathExists = require('../fsPathExists');
-const sleep = require('../sleep');
-
-module.exports = (tests) => {
+export default (tests) => {
   tests.add('`disposableDirectory` with a sync callback.', async () => {
     let createdTempDirPath;
 
@@ -13,8 +11,8 @@ module.exports = (tests) => {
       createdTempDirPath = tempDirPath;
     });
 
-    assert.strictEqual(typeof createdTempDirPath, 'string');
-    assert.strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(typeof createdTempDirPath, 'string');
+    strictEqual(await fsPathExists(createdTempDirPath), false);
   });
 
   tests.add('`disposableDirectory` with an async callback.', async () => {
@@ -27,9 +25,9 @@ module.exports = (tests) => {
       callbackAwaited = true;
     });
 
-    assert.strictEqual(callbackAwaited, true);
-    assert.strictEqual(typeof createdTempDirPath, 'string');
-    assert.strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(callbackAwaited, true);
+    strictEqual(typeof createdTempDirPath, 'string');
+    strictEqual(await fsPathExists(createdTempDirPath), false);
   });
 
   tests.add('`disposableDirectory` with a sync callback error.', async () => {
@@ -45,8 +43,8 @@ module.exports = (tests) => {
       errorMessage = message;
     }
 
-    assert.strictEqual(errorMessage, 'TEST_MESSAGE');
-    assert.strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(errorMessage, 'TEST_MESSAGE');
+    strictEqual(await fsPathExists(createdTempDirPath), false);
   });
 
   tests.add(
@@ -64,8 +62,8 @@ module.exports = (tests) => {
         errorMessage = message;
       }
 
-      assert.strictEqual(errorMessage, 'TEST_MESSAGE');
-      assert.strictEqual(await fsPathExists(createdTempDirPath), false);
+      strictEqual(errorMessage, 'TEST_MESSAGE');
+      strictEqual(await fsPathExists(createdTempDirPath), false);
     }
   );
 };

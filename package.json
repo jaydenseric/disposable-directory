@@ -25,12 +25,9 @@
     "private",
     "public"
   ],
-  "main": "public",
+  "main": "./public/index.mjs",
   "exports": {
-    ".": {
-      "import": "./public/index.mjs",
-      "require": "./public/index.js"
-    },
+    ".": "./public/index.mjs",
     "./public/": "./public/",
     "./package": "./package.json",
     "./package.json": "./package.json"
@@ -39,17 +36,17 @@
     "node": "^12.20 || >= 14.13"
   },
   "devDependencies": {
-    "coverage-node": "^3.0.0",
-    "eslint": "^7.12.1",
-    "eslint-config-env": "^15.0.1",
-    "eslint-config-prettier": "^6.15.0",
+    "coverage-node": "^5.0.0",
+    "eslint": "^7.25.0",
+    "eslint-config-env": "^19.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.7.3",
+    "eslint-plugin-jsdoc": "^32.3.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jsdoc-md": "^7.0.0",
-    "prettier": "^2.1.2",
-    "test-director": "^4.0.1"
+    "eslint-plugin-prettier": "^3.4.0",
+    "jsdoc-md": "^10.0.1",
+    "prettier": "^2.2.1",
+    "test-director": "^6.0.0"
   },
   "scripts": {
     "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
@@ -58,7 +55,7 @@
     "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
     "test:eslint": "eslint --ext mjs,js .",
     "test:prettier": "prettier -c .",
-    "test:api": "coverage-node test",
+    "test:api": "coverage-node test/index.mjs",
     "prepublishOnly": "npm test"
   }
 }

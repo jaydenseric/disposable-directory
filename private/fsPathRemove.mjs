@@ -1,7 +1,5 @@
-'use strict';
-
-const { execFile } = require('child_process');
-const { promisify } = require('util');
+import { execFile } from 'child_process';
+import { promisify } from 'util';
 
 const execFilePromise = promisify(execFile);
 
@@ -13,7 +11,7 @@ const execFilePromise = promisify(execFile);
  * @returns {Promise} Resolves when the file or directory is removed.
  * @ignore
  */
-module.exports = async function fsPathRemove(path) {
+export default async function fsPathRemove(path) {
   if (typeof path !== 'string') throw new Error('Path must be a string.');
   return execFilePromise('rm', ['-rf', path]);
-};
+}

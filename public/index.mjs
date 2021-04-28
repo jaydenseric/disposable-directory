@@ -1,1 +1,1 @@
-export { default as disposableDirectory } from './disposableDirectory.js';
+export { default as disposableDirectory } from './disposableDirectory.mjs';

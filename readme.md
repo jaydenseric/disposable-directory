@@ -31,7 +31,7 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 | :-- | :-- | :-- |
 | `callback` | Function | A sync or async callback that receives the temporary directory path. |
 
-**Returns:** Promise&lt;void> — Resolves once the callback is done and the disposable directory is deleted.
+**Returns:** Promise\<void> — Resolves once the callback is done and the disposable directory is deleted.
 
 #### Examples
 
@@ -42,24 +42,12 @@ _Ways to `import`._
 > ```
 >
 > ```js
-> import disposableDirectory from 'disposable-directory/public/disposableDirectory.js';
-> ```
-
-_Ways to `require`._
-
-> ```js
-> const { disposableDirectory } = require('disposable-directory');
-> ```
->
-> ```js
-> const disposableDirectory = require('disposable-directory/public/disposableDirectory');
+> import disposableDirectory from 'disposable-directory/public/disposableDirectory.mjs';
 > ```
 
 _How to use a disposable directory._
 
 > ```js
-> const { disposableDirectory } = require('disposable-directory');
->
 > disposableDirectory(async (directoryPath) => {
 >   // Use the directory here.
 > })

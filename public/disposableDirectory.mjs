@@ -1,7 +1,5 @@
-'use strict';
-
-const createTempDir = require('../private/createTempDir');
-const fsPathRemove = require('../private/fsPathRemove');
+import createTempDir from '../private/createTempDir.mjs';
+import fsPathRemove from '../private/fsPathRemove.mjs';
 
 /**
  * Asynchronously creates a disposable directory in the OS temporary directory
@@ -16,20 +14,10 @@ const fsPathRemove = require('../private/fsPathRemove');
  * ```
  *
  * ```js
- * import disposableDirectory from 'disposable-directory/public/disposableDirectory.js';
- * ```
- * @example <caption>Ways to `require`.</caption>
- * ```js
- * const { disposableDirectory } = require('disposable-directory');
- * ```
- *
- * ```js
- * const disposableDirectory = require('disposable-directory/public/disposableDirectory');
+ * import disposableDirectory from 'disposable-directory/public/disposableDirectory.mjs';
  * ```
  * @example <caption>How to use a disposable directory.</caption>
  * ```js
- * const { disposableDirectory } = require('disposable-directory');
- *
  * disposableDirectory(async (directoryPath) => {
  *   // Use the directory here.
  * })
@@ -41,11 +29,11 @@ const fsPathRemove = require('../private/fsPathRemove');
  *   });
  * ```
  */
-module.exports = async function disposableDirectory(callback) {
+export default async function disposableDirectory(callback) {
   try {
     var tempDirPath = await createTempDir();
     await callback(tempDirPath);
   } finally {
     if (tempDirPath) await fsPathRemove(tempDirPath);
   }
-};
+}
