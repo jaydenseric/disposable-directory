@@ -8,10 +8,10 @@ const execFilePromise = promisify(execFile);
  * @kind function
  * @name fsPathRemove
  * @param {string} path Filesystem path.
- * @returns {Promise} Resolves when the file or directory is removed.
+ * @returns {Promise<void>} Resolves once the file or directory is removed.
  * @ignore
  */
 export default async function fsPathRemove(path) {
   if (typeof path !== 'string') throw new Error('Path must be a string.');
-  return execFilePromise('rm', ['-rf', path]);
+  await execFilePromise('rm', ['-rf', path]);
 }
