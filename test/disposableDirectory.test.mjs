@@ -1,6 +1,6 @@
 import { strictEqual } from 'assert';
+import { existsSync } from 'fs';
 import disposableDirectory from '../index.mjs';
-import fsPathExists from './fsPathExists.mjs';
 
 export default (tests) => {
   tests.add('`disposableDirectory` with a sync callback.', async () => {
@@ -11,7 +11,7 @@ export default (tests) => {
     });
 
     strictEqual(typeof createdTempDirPath, 'string');
-    strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(existsSync(createdTempDirPath), false);
   });
 
   tests.add('`disposableDirectory` with an async callback.', async () => {
@@ -29,7 +29,7 @@ export default (tests) => {
 
     strictEqual(callbackAwaited, true);
     strictEqual(typeof createdTempDirPath, 'string');
-    strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(existsSync(createdTempDirPath), false);
   });
 
   tests.add('`disposableDirectory` with a sync callback error.', async () => {
@@ -46,7 +46,7 @@ export default (tests) => {
     }
 
     strictEqual(errorMessage, 'TEST_MESSAGE');
-    strictEqual(await fsPathExists(createdTempDirPath), false);
+    strictEqual(existsSync(createdTempDirPath), false);
   });
 
   tests.add(
@@ -65,7 +65,7 @@ export default (tests) => {
       }
 
       strictEqual(errorMessage, 'TEST_MESSAGE');
-      strictEqual(await fsPathExists(createdTempDirPath), false);
+      strictEqual(existsSync(createdTempDirPath), false);
     }
   );
 };
