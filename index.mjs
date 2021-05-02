@@ -26,6 +26,9 @@ import fsPathRemove from './private/fsPathRemove.mjs';
  * ```
  */
 export default async function disposableDirectory(callback) {
+  if (typeof callback !== 'function')
+    throw new TypeError('Argument 1 `callback` must be a function.');
+
   try {
     var tempDirPath = await createTempDir();
     await callback(tempDirPath);

@@ -1,8 +1,18 @@
-import { strictEqual } from 'assert';
+import { rejects, strictEqual } from 'assert';
 import { existsSync } from 'fs';
 import disposableDirectory from '../index.mjs';
 
 export default (tests) => {
+  tests.add(
+    '`disposableDirectory` with argument 1 `callback` not a function.',
+    async () => {
+      await rejects(
+        disposableDirectory(true),
+        new TypeError('Argument 1 `callback` must be a function.')
+      );
+    }
+  );
+
   tests.add('`disposableDirectory` with a sync callback.', async () => {
     let createdTempDirPath;
 

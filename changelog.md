@@ -8,6 +8,7 @@
 - Updated dev dependencies, some of which require newer Node.js versions than were previously supported.
 - The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#esm_require).
 - The function `disposableDirectory` is now only accessible via a default `import` from the main index.
+- The function `disposableDirectory` now throws a `TypeError` if argument 1 `callback` isn’t a function.
 - Added back a package `sideEffects` field.
 
 ### Patch
