@@ -25,6 +25,7 @@
     "private",
     "index.mjs"
   ],
+  "sideEffects": false,
   "main": "./index.mjs",
   "exports": {
     ".": "./index.mjs",
