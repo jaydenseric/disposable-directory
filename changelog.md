@@ -20,7 +20,9 @@
   - Don’t specify the `CI` environment variable as it’s set by default.
 - Simplified the ESLint config.
 - Removed `npm-debug.log` from the `.gitignore` file as npm [v4.2.0](https://github.com/npm/npm/releases/tag/v4.2.0)+ doesn’t create it in the current working directory.
-- Updated the private function `fsPathRemove` to resolve `void`.
+- Updated the private function `fsPathRemove`:
+  - Throw a more specific `TypeError` when argument 1 `path` isn’t a string.
+  - Resolve `void`.
 - Removed the test helper function `sleep`.
 - Replaced the test helper function `fsPathExists` with the Node.js `fs.existsSync` function.
 

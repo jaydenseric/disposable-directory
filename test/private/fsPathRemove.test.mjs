@@ -4,6 +4,16 @@ import createTempDir from '../../private/createTempDir.mjs';
 import fsPathRemove from '../../private/fsPathRemove.mjs';
 
 export default (tests) => {
+  tests.add(
+    '`fsPathRemove` with argument 1 `path` not a function.',
+    async () => {
+      await rejects(
+        () => fsPathRemove(true),
+        new TypeError('Argument 1 `path` must be a string.')
+      );
+    }
+  );
+
   tests.add('`fsPathRemove` with a directory that exists.', async () => {
     const tempDirPath = await createTempDir();
     await fsPathRemove(tempDirPath);
@@ -14,11 +24,5 @@ export default (tests) => {
     const path = './this-directory-no-exists';
     await fsPathRemove(path);
     strictEqual(existsSync(path), false);
-  });
-
-  tests.add('`fsPathRemove` with an invalid path argument.', async () => {
-    await rejects(() => fsPathRemove(undefined), {
-      message: 'Path must be a string.',
-    });
   });
 };

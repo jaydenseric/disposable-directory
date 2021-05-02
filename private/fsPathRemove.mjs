@@ -12,6 +12,8 @@ const execFilePromise = promisify(execFile);
  * @ignore
  */
 export default async function fsPathRemove(path) {
-  if (typeof path !== 'string') throw new Error('Path must be a string.');
+  if (typeof path !== 'string')
+    throw new TypeError('Argument 1 `path` must be a string.');
+
   await execFilePromise('rm', ['-rf', path]);
 }
