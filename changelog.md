@@ -25,6 +25,7 @@
 - Updated the private function `fsPathRemove`:
   - Throw a more specific `TypeError` when argument 1 `path` isn’t a string.
   - Resolve `void`.
+- Simplified a `rejects` assertion in `fsPathRemove` tests.
 - Removed the test helper function `sleep`.
 - Replaced the test helper function `fsPathExists` with the Node.js `fs.existsSync` function.
 

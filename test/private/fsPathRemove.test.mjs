@@ -8,7 +8,7 @@ export default (tests) => {
     '`fsPathRemove` with argument 1 `path` not a function.',
     async () => {
       await rejects(
-        () => fsPathRemove(true),
+        fsPathRemove(true),
         new TypeError('Argument 1 `path` must be a string.')
       );
     }
