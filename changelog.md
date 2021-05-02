@@ -29,6 +29,7 @@
 - Simplified a `rejects` assertion in `fsPathRemove` tests.
 - Removed the test helper function `sleep`.
 - Replaced the test helper function `fsPathExists` with the Node.js `fs.existsSync` function.
+- Readme tweaks.
 
 ## 3.0.0
 

@@ -6,7 +6,7 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 
 ## Setup
 
-To install from [npm](https://npmjs.com) run:
+To install with [npm](https://npmjs.com/get-npm), run:
 
 ```sh
 npm install disposable-directory
@@ -14,8 +14,10 @@ npm install disposable-directory
 
 ## Support
 
-- Linux, macOS.
-- Node.js `^12.20 || >= 14.13`.
+- Operating system:
+  - Linux
+  - macOS
+- [Node.js](https://nodejs.org): `^12.20 || >= 14.13`
 
 ## API
 
