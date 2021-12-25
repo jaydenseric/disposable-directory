@@ -1,6 +1,6 @@
-import fs from 'fs';
-import { tmpdir } from 'os';
-import { sep } from 'path';
+import fs from "fs";
+import { tmpdir } from "os";
+import { sep } from "path";
 
 /**
  * Creates a directory in the OS temporary directory.

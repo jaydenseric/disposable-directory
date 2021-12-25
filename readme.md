@@ -36,7 +36,7 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 _How to `import`._
 
 > ```js
-> import disposableDirectory from 'disposable-directory';
+> import disposableDirectory from "disposable-directory";
 > ```
 
 _How to use a disposable directory._

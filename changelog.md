@@ -12,6 +12,7 @@
 
 - Simplified package scripts.
 - Also run GitHub Actions CI with Node.js v17, and drop v15.
+- Configured Prettier option `singleQuote` to the default, `false`.
 
 ## 4.0.0
 

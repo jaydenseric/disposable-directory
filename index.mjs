@@ -1,5 +1,5 @@
-import createTempDir from './private/createTempDir.mjs';
-import fsPathRemove from './private/fsPathRemove.mjs';
+import createTempDir from "./private/createTempDir.mjs";
+import fsPathRemove from "./private/fsPathRemove.mjs";
 
 /**
  * Asynchronously creates a disposable directory in the OS temporary directory
@@ -10,7 +10,7 @@ import fsPathRemove from './private/fsPathRemove.mjs';
  * @returns {Promise<void>} Resolves once the callback is done and the disposable directory is deleted.
  * @example <caption>How to `import`.</caption>
  * ```js
- * import disposableDirectory from 'disposable-directory';
+ * import disposableDirectory from "disposable-directory";
  * ```
  * @example <caption>How to use a disposable directory.</caption>
  * ```js
@@ -26,8 +26,8 @@ import fsPathRemove from './private/fsPathRemove.mjs';
  * ```
  */
 export default async function disposableDirectory(callback) {
-  if (typeof callback !== 'function')
-    throw new TypeError('Argument 1 `callback` must be a function.');
+  if (typeof callback !== "function")
+    throw new TypeError("Argument 1 `callback` must be a function.");
 
   try {
     var tempDirPath = await createTempDir();

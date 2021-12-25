@@ -1,5 +1,5 @@
-import { execFile } from 'child_process';
-import { promisify } from 'util';
+import { execFile } from "child_process";
+import { promisify } from "util";
 
 const execFilePromise = promisify(execFile);
 
@@ -12,8 +12,8 @@ const execFilePromise = promisify(execFile);
  * @ignore
  */
 export default async function fsPathRemove(path) {
-  if (typeof path !== 'string')
-    throw new TypeError('Argument 1 `path` must be a string.');
+  if (typeof path !== "string")
+    throw new TypeError("Argument 1 `path` must be a string.");
 
-  await execFilePromise('rm', ['-rf', path]);
+  await execFilePromise("rm", ["-rf", path]);
 }
