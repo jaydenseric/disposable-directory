@@ -17,7 +17,7 @@ npm install disposable-directory
 - Operating system:
   - Linux
   - macOS
-- [Node.js](https://nodejs.org): `^12.20 || >= 14.13`
+- [Node.js](https://nodejs.org): `^12.22.0 || ^14.17.0 || >= 16.0.0`
 
 ## API
 
