@@ -23,12 +23,13 @@
   ],
   "files": [
     "private",
-    "index.mjs"
+    "disposableDirectory.mjs"
   ],
   "sideEffects": false,
-  "main": "./index.mjs",
+  "main": "./disposableDirectory.mjs",
   "exports": {
-    ".": "./index.mjs",
+    ".": "./disposableDirectory.mjs",
+    "./disposableDirectory.mjs": "./disposableDirectory.mjs",
     "./package.json": "./package.json"
   },
   "engines": {

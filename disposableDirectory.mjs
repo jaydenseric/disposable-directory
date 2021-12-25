@@ -8,9 +8,13 @@ import fsPathRemove from "./private/fsPathRemove.mjs";
  * @name disposableDirectory
  * @param {Function} callback A sync or async callback that receives the temporary directory path.
  * @returns {Promise<void>} Resolves once the callback is done and the disposable directory is deleted.
- * @example <caption>How to `import`.</caption>
+ * @example <caption>Ways to import.</caption>
  * ```js
  * import disposableDirectory from "disposable-directory";
+ * ```
+ *
+ * ```js
+ * import disposableDirectory from "disposable-directory/disposableDirectory.mjs";
  * ```
  * @example <caption>How to use a disposable directory.</caption>
  * ```js

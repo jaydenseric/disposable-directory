@@ -33,10 +33,14 @@ Asynchronously creates a disposable directory in the OS temporary directory that
 
 #### Examples
 
-_How to `import`._
+_Ways to import._
 
 > ```js
 > import disposableDirectory from "disposable-directory";
+> ```
+>
+> ```js
+> import disposableDirectory from "disposable-directory/disposableDirectory.mjs";
 > ```
 
 _How to use a disposable directory._
