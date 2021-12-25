@@ -21,10 +21,6 @@ npm install disposable-directory
 
 ## API
 
-### Table of contents
-
-- [function disposableDirectory](#function-disposabledirectory)
-
 ### function disposableDirectory
 
 Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.
