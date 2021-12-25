@@ -4,7 +4,7 @@
 
 Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.
 
-## Setup
+## Installation
 
 To install with [npm](https://npmjs.com/get-npm), run:
 
@@ -12,7 +12,7 @@ To install with [npm](https://npmjs.com/get-npm), run:
 npm install disposable-directory
 ```
 
-## Support
+## Requirements
 
 - Operating system:
   - Linux
