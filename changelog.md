@@ -10,6 +10,7 @@
 
 ### Patch
 
+- Simplified package scripts.
 - Also run GitHub Actions CI with Node.js v17, and drop v15.
 
 ## 4.0.0
