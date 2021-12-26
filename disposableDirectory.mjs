@@ -1,5 +1,5 @@
-import createTempDir from "./private/createTempDir.mjs";
-import fsPathRemove from "./private/fsPathRemove.mjs";
+import createTempDir from "./createTempDir.mjs";
+import fsPathRemove from "./fsPathRemove.mjs";
 
 /**
  * Asynchronously creates a disposable directory in the OS temporary directory

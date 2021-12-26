@@ -22,8 +22,9 @@
     "mjs"
   ],
   "files": [
-    "private",
-    "disposableDirectory.mjs"
+    "createTempDir.mjs",
+    "disposableDirectory.mjs",
+    "fsPathRemove.mjs"
   ],
   "sideEffects": false,
   "main": "./disposableDirectory.mjs",
@@ -53,7 +54,7 @@
     "docs-check": "jsdoc-md -c",
     "eslint": "eslint .",
     "prettier": "prettier -c .",
-    "tests": "coverage-node test/index.mjs",
+    "tests": "coverage-node test.mjs",
     "test": "npm run eslint && npm run prettier && npm run docs-check && npm run tests",
     "prepublishOnly": "npm test"
   }

@@ -1,6 +1,6 @@
 import { rejects, strictEqual } from "assert";
 import { existsSync } from "fs";
-import disposableDirectory from "../disposableDirectory.mjs";
+import disposableDirectory from "./disposableDirectory.mjs";
 
 export default (tests) => {
   tests.add(
