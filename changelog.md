@@ -1,5 +1,11 @@
 # disposable-directory changelog
 
+## Next
+
+### Patch
+
+- Moved [`@types/node`](https://npm.im/@types/node) from package `devDependencies` to `dependencies`, using `*` for the version.
+
 ## 5.0.0
 
 ### Major
