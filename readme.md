@@ -21,13 +21,16 @@ npm install disposable-directory
 
 ## API
 
+- [function disposableDirectory](#function-disposabledirectory)
+- [type DisposableDirectoryCallback](#type-disposabledirectorycallback)
+
 ### function disposableDirectory
 
 Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.
 
 | Parameter | Type | Description |
 | :-- | :-- | :-- |
-| `callback` | Function | A sync or async callback that receives the temporary directory path. |
+| `callback` | [DisposableDirectoryCallback](#type-disposabledirectorycallback) | A sync or async callback that&#xA;receives the temporary directory path. |
 
 **Returns:** Promise\<void> — Resolves once the callback is done and the disposable directory is deleted.
 
@@ -56,3 +59,17 @@ _How to use a disposable directory._
 >     // The directory is gone.
 >   });
 > ```
+
+---
+
+### type DisposableDirectoryCallback
+
+A sync or async callback that receives the temporary directory path.
+
+**Type:** Function
+
+| Parameter     | Type   | Description               |
+| :------------ | :----- | :------------------------ |
+| `tempDirPath` | string | Temporary directory path. |
+
+**Returns:** void | Promise\<void>

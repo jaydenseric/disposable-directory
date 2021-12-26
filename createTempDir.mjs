@@ -1,11 +1,11 @@
+// @ts-check
+
 import fs from "fs";
 import { tmpdir } from "os";
 import { sep } from "path";
 
 /**
  * Creates a directory in the OS temporary directory.
- * @kind function
- * @name createTempDir
  * @returns {Promise<string>} Resolves the created directory path.
  * @ignore
  */

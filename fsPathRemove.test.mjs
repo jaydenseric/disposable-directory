@@ -1,14 +1,24 @@
+// @ts-check
+
 import { rejects, strictEqual } from "assert";
 import { existsSync } from "fs";
 import createTempDir from "./createTempDir.mjs";
 import fsPathRemove from "./fsPathRemove.mjs";
 
+/**
+ * Adds `fsPathRemove` tests.
+ * @param {import("test-director").default} tests Test director.
+ * @ignore
+ */
 export default (tests) => {
   tests.add(
     "`fsPathRemove` with argument 1 `path` not a function.",
     async () => {
       await rejects(
-        fsPathRemove(true),
+        fsPathRemove(
+          // @ts-ignore Testing invalid.
+          true
+        ),
         new TypeError("Argument 1 `path` must be a string.")
       );
     }

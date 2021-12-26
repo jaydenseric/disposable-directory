@@ -1,19 +1,30 @@
+// @ts-check
+
 import { rejects, strictEqual } from "assert";
 import { existsSync } from "fs";
 import disposableDirectory from "./disposableDirectory.mjs";
 
+/**
+ * Adds `disposableDirectory` tests.
+ * @param {import("test-director").default} tests Test director.
+ * @ignore
+ */
 export default (tests) => {
   tests.add(
     "`disposableDirectory` with argument 1 `callback` not a function.",
     async () => {
       await rejects(
-        disposableDirectory(true),
+        disposableDirectory(
+          // @ts-ignore Testing invalid.
+          true
+        ),
         new TypeError("Argument 1 `callback` must be a function.")
       );
     }
   );
 
   tests.add("`disposableDirectory` with a sync callback.", async () => {
+    /** @type {any} */
     let createdTempDirPath;
 
     await disposableDirectory((tempDirPath) => {
@@ -25,6 +36,7 @@ export default (tests) => {
   });
 
   tests.add("`disposableDirectory` with an async callback.", async () => {
+    /** @type {any} */
     let createdTempDirPath;
     let callbackAwaited;
 
@@ -43,6 +55,7 @@ export default (tests) => {
   });
 
   tests.add("`disposableDirectory` with a sync callback error.", async () => {
+    /** @type {any} */
     let createdTempDirPath;
     let errorMessage;
 
@@ -62,6 +75,7 @@ export default (tests) => {
   tests.add(
     "`disposableDirectory` with an async callback rejection.",
     async () => {
+      /** @type {any} */
       let createdTempDirPath;
       let errorMessage;
 

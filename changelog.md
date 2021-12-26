@@ -8,10 +8,12 @@
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 - Removed `./package` from the package `exports` field; the full `package.json` filename must be used in a `require` path.
 - Renamed `index.mjs` to `disposableDirectory.mjs` and added it to the package `exports` field.
+- Implemented TypeScript types via JSDoc comments.
 
 ### Patch
 
 - Simplified package scripts.
+- Check TypeScript types via a new package `types` script.
 - Also run GitHub Actions CI with Node.js v17, and drop v15.
 - Configured Prettier option `singleQuote` to the default, `false`.
 - Reorganized the private and test files, individually listing published files in the the package `files` field.
