@@ -1,6 +1,6 @@
 {
   "name": "disposable-directory",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.",
   "license": "MIT",
   "author": {
