@@ -2,6 +2,7 @@
 
 import { strictEqual } from "assert";
 import { existsSync } from "fs";
+
 import createTempDir from "./createTempDir.mjs";
 import fsPathRemove from "./fsPathRemove.mjs";
 
