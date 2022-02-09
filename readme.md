@@ -12,6 +12,24 @@ To install with [npm](https://npmjs.com/get-npm), run:
 npm install disposable-directory
 ```
 
+## Examples
+
+How to use a disposable directory:
+
+```js
+import disposableDirectory from "disposable-directory";
+
+disposableDirectory(async (directoryPath) => {
+  // Use the directory here.
+})
+  .then(() => {
+    // The directory is gone.
+  })
+  .catch(() => {
+    // The directory is gone.
+  });
+```
+
 ## Requirements
 
 - Operating system:
@@ -19,57 +37,8 @@ npm install disposable-directory
   - macOS
 - [Node.js](https://nodejs.org): `^12.22.0 || ^14.17.0 || >= 16.0.0`
 
-## API
+## Exports
 
-- [function disposableDirectory](#function-disposabledirectory)
-- [type DisposableDirectoryCallback](#type-disposabledirectorycallback)
+These ECMAScript modules are published to [npm](https://npmjs.com) and exported via the [`package.json`](./package.json) `exports` field:
 
-### function disposableDirectory
-
-Asynchronously creates a disposable directory in the OS temporary directory that gets deleted after the callback is done or errors.
-
-| Parameter | Type | Description |
-| :-- | :-- | :-- |
-| `callback` | [DisposableDirectoryCallback](#type-disposabledirectorycallback) | A sync or async callback that&#xA;receives the temporary directory path. |
-
-**Returns:** Promise\<void> — Resolves once the callback is done and the disposable directory is deleted.
-
-#### Examples
-
-_Ways to import._
-
-> ```js
-> import disposableDirectory from "disposable-directory";
-> ```
->
-> ```js
-> import disposableDirectory from "disposable-directory/disposableDirectory.mjs";
-> ```
-
-_How to use a disposable directory._
-
-> ```js
-> disposableDirectory(async (directoryPath) => {
->   // Use the directory here.
-> })
->   .then(() => {
->     // The directory is gone.
->   })
->   .catch(() => {
->     // The directory is gone.
->   });
-> ```
-
----
-
-### type DisposableDirectoryCallback
-
-A sync or async callback that receives the temporary directory path.
-
-**Type:** Function
-
-| Parameter     | Type   | Description               |
-| :------------ | :----- | :------------------------ |
-| `tempDirPath` | string | Temporary directory path. |
-
-**Returns:** void | Promise\<void>
+- [`disposableDirectory.mjs`](./disposableDirectory.mjs)

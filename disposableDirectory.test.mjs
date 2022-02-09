@@ -8,7 +8,6 @@ import disposableDirectory from "./disposableDirectory.mjs";
 /**
  * Adds `disposableDirectory` tests.
  * @param {import("test-director").default} tests Test director.
- * @ignore
  */
 export default (tests) => {
   tests.add(

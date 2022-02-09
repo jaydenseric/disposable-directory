@@ -7,7 +7,6 @@ import { sep } from "path";
 /**
  * Creates a directory in the OS temporary directory.
  * @returns {Promise<string>} Resolves the created directory path.
- * @ignore
  */
 export default async function createTempDir() {
   // On macOS `os.tmpdir()` returns the path to a symlink, see:

@@ -9,7 +9,6 @@ import fsPathRemove from "./fsPathRemove.mjs";
 /**
  * Adds `createTempDir` tests.
  * @param {import("test-director").default} tests Test director.
- * @ignore
  */
 export default (tests) => {
   tests.add("`createTempDir`.", async () => {
