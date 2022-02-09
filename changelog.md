@@ -7,6 +7,7 @@
 - Updated dev dependencies.
 - Simplified dev dependencies and config for ESLint.
 - Updated `jsconfig.json` to disable TypeScript automatic type acquisition for the project.
+- Added a `license.md` MIT License file.
 
 ## 5.0.1
 
