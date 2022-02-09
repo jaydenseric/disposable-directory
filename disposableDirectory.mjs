@@ -4,13 +4,6 @@ import createTempDir from "./createTempDir.mjs";
 import fsPathRemove from "./fsPathRemove.mjs";
 
 /**
- * A sync or async callback that receives the temporary directory path.
- * @callback DisposableDirectoryCallback
- * @param {string} tempDirPath Temporary directory path.
- * @returns {void | Promise<void>}
- */
-
-/**
  * Asynchronously creates a disposable directory in the OS temporary directory
  * that gets deleted after the callback is done or errors.
  * @param {DisposableDirectoryCallback} callback A sync or async callback that
@@ -45,3 +38,10 @@ export default async function disposableDirectory(callback) {
     if (tempDirPath) await fsPathRemove(tempDirPath);
   }
 }
+
+/**
+ * A sync or async callback that receives the temporary directory path.
+ * @callback DisposableDirectoryCallback
+ * @param {string} tempDirPath Temporary directory path.
+ * @returns {void | Promise<void>}
+ */
