@@ -1,6 +1,6 @@
 # disposable-directory changelog
 
-## Next
+## 5.0.2
 
 ### Patch
 
