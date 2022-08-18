@@ -7,6 +7,8 @@
 - Updated Node.js support to `^14.17.0 || ^16.0.0 || >= 18.0.0`.
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 - Removed the package `main` field.
+- Migrated from the Node.js builtin module `fs` to `fs/promises`.
+- Replaced the function `fsPathRemove` with the function `rm` from the Node.js builtin module `fs/promises`.
 
 ### Patch
 

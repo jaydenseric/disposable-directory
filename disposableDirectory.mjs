@@ -1,7 +1,8 @@
 // @ts-check
 
+import { rm } from "fs/promises";
+
 import createTempDir from "./createTempDir.mjs";
-import fsPathRemove from "./fsPathRemove.mjs";
 
 /**
  * Asynchronously creates a disposable directory in the OS temporary directory
@@ -35,7 +36,11 @@ export default async function disposableDirectory(callback) {
     tempDirPath = await createTempDir();
     await callback(tempDirPath);
   } finally {
-    if (tempDirPath) await fsPathRemove(tempDirPath);
+    if (tempDirPath)
+      await rm(tempDirPath, {
+        force: true,
+        recursive: true,
+      });
   }
 }
 

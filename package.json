@@ -23,8 +23,7 @@
   ],
   "files": [
     "createTempDir.mjs",
-    "disposableDirectory.mjs",
-    "fsPathRemove.mjs"
+    "disposableDirectory.mjs"
   ],
   "sideEffects": false,
   "exports": {
