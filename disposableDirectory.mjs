@@ -1,6 +1,6 @@
 // @ts-check
 
-import { rm } from "fs/promises";
+import { rm } from "node:fs/promises";
 
 import createTempDir from "./createTempDir.mjs";
 

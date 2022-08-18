@@ -1,8 +1,8 @@
 // @ts-check
 
-import { strictEqual } from "assert";
-import { existsSync } from "fs";
-import { rm } from "fs/promises";
+import { strictEqual } from "node:assert";
+import { existsSync } from "node:fs";
+import { rm } from "node:fs/promises";
 
 import createTempDir from "./createTempDir.mjs";
 

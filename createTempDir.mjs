@@ -1,8 +1,8 @@
 // @ts-check
 
-import { mkdtemp, realpath } from "fs/promises";
-import { tmpdir } from "os";
-import { sep } from "path";
+import { mkdtemp, realpath } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { sep } from "node:path";
 
 /**
  * Creates a directory in the OS temporary directory.

@@ -1,7 +1,7 @@
 // @ts-check
 
-import { rejects, strictEqual } from "assert";
-import { existsSync } from "fs";
+import { rejects, strictEqual } from "node:assert";
+import { existsSync } from "node:fs";
 
 import disposableDirectory from "./disposableDirectory.mjs";
 
