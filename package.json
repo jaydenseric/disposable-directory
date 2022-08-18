@@ -27,7 +27,6 @@
     "fsPathRemove.mjs"
   ],
   "sideEffects": false,
-  "main": "./disposableDirectory.mjs",
   "exports": {
     ".": "./disposableDirectory.mjs",
     "./disposableDirectory.mjs": "./disposableDirectory.mjs",
